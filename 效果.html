@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.main{
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				background: rgba(188,228,254,0.5);
+			}
+			.main .allsect{
+				position: relative;
+				left: 50%;
+				margin-left: -245px;
+				top: 100px;
+				font-size: 28px;
+				text-align: center;
+				line-height: 80px;
+			}
+			.main .allsect .sect1{
+				width: 150px;
+				height: 80px;
+				background: white;
+				position: absolute;
+				z-index: 1;
+				border-top: solid 7px burlywood;
+			}
+			.main .allsect .sect2{
+				width: 150px;
+				height: 80px;
+				position: absolute;
+				border-bottom: solid 7px burlywood;
+				left: 170px;
+				z-index: 1;
+			}
+			.main .allsect .sect3{
+				width: 150px;
+				height: 80px;
+				position: absolute;
+				z-index: 1;
+				left: 340px;
+				border-bottom: solid 7px burlywood;
+			}
+			.main .allsect .content{
+				height: 400px;
+				width: 700px;
+				background: white;
+				top: 87px;
+				position: absolute;
+				display: block;
+			}
+			a{
+				text-decoration: none;
+				color: black;
+			}
+		</style>
+		<script src="js/jquery-1.12.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".sect1")
+				$(".sect1").click(function(){
+					$(".content").html("s1");
+				})
+				$(".sect2").click(function(){
+					$(".content").html("s2");
+				})
+				$(".sect3").click(function(){
+					$(".content").html("s3");
+				})
+			})
+		</script>
+		
+	</head>
+	<body>
+		<div class="main">
+			<div class="allsect">
+				<div class="sect1"><a href="#">Section1</a></div>
+				<div class="sect2"><a href="#">Section2</a></div>
+				<div class="sect3"><a href="#">Section3</a></div>
+				
+				<div class="content">s1</div>
+
+			</div>
+		</div>
+	</body>
+</html>
